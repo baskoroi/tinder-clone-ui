@@ -1,17 +1,35 @@
-.card {
+.container {
   width: fit-content;
   position: relative;
 }
 
-.card img, .card-info {
+.image-indicator {
+	position: absolute;
+	top: 4px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.indicator {
+	background-color: #dddddd;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 2px;
+	height: 4px;
+}
+
+.image-indicator, .image, .info {
   width: 100%;
 }
 
-.card > * {
+.image, .info {
   border-radius: 8px;
 }
 
-.card-info {
+.info {
   position: absolute;
   bottom: 0px;
 
@@ -20,22 +38,22 @@
   padding: 12px;
 }
 
-.card-identifier {
+.identifier {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.card-name, .card-age {
+.name, .age {
   font-size: 20pt;
 }
 
-.card-name {
+.name {
   font-weight: bold;
   margin-right: 8px;
 }
 
-.card-reveal-button {
+.reveal-button {
   background: none;
   border: 1px solid #ffffff;
   width: 36px;
@@ -45,6 +63,6 @@
   cursor: pointer;
 }
 
-.card-location-icon {
+.location-icon {
   margin-right: 8px;
 }
