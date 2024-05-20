@@ -43,12 +43,15 @@ body, body * {
   position: relative;
 }
 
-.card img {
+.card img, .card-info {
   width: 100%;
 }
 
+.card > * {
+  border-radius: 8px;
+}
+
 .card-info {
-  width: 100%;
   position: absolute;
   bottom: 0px;
 
