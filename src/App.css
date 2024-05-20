@@ -82,6 +82,7 @@ body, body * {
   height: 36px;
   border-radius: 18px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .card-location-icon {
