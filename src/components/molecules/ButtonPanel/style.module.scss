@@ -31,26 +31,24 @@
 	font-size: 30pt;
 }
 
-/* TODO use gradients inside of solid colors below */
-
+// TODO use gradients inside of solid colors below
 .button-refresh {
 	@include button-base($theme: #fdcd56);
 }
-
 .button-nope {
 	@include button-base($theme: #e82386);
-	@include button-large()
 }
-
 .button-super-like {
 	@include button-base($theme: #45c2f9);
 }
-
 .button-like {
 	@include button-base($theme: #5af9cc);
-	@include button-large()
 }
-
 .button-boost {
 	@include button-base($theme: #d212d3);
+}
+// END TODO
+
+.button-nope, .button-like {
+	@include button-large()
 }
