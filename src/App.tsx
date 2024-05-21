@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBell } from '@fortawesome/free-solid-svg-icons';
 import Card from './components/organisms/Card';
@@ -12,10 +12,10 @@ const TEST_IMAGE_2: string = 'https://images-ssl.gotinder.com/u/5NRCFPzF46jb8qLo
 class App extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="App">
+      <div className={styles['App']}>
         <nav>
-          <img src={logo} alt="logo" className="img-logo" />
-          <div className="nav-buttons">
+          <img src={logo} alt="logo" className={styles['img-logo']} />
+          <div className={styles['nav-buttons']}>
             <a href="/">
               <FontAwesomeIcon icon={faBell} size='2x' />
             </a>
