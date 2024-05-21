@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBoltLightning, faRefresh, faStar, faThumbsUp, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBoltLightning, faHeart, faRefresh, faStar, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 class ButtonPanel extends React.Component {
 	render(): React.ReactNode {
@@ -17,7 +17,7 @@ class ButtonPanel extends React.Component {
 					<FontAwesomeIcon icon={faStar} />
 				</div>
 				<div className={styles['button-like']}>
-					<FontAwesomeIcon icon={faThumbsUp} />
+					<FontAwesomeIcon icon={faHeart} />
 				</div>
 				<div className={styles['button-boost']}>
 					<FontAwesomeIcon icon={faBoltLightning} />
