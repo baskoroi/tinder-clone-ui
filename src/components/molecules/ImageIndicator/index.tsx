@@ -8,24 +8,24 @@ interface ImageIndicatorProps {
 
 class ImageIndicator extends React.Component<ImageIndicatorProps> {
   render(): ReactNode {
-  const { numberOfImages, currentIndex } = this.props;
-  let imageIndicator = [];
-  for (let i = 0; i < numberOfImages; i++) {
-    imageIndicator.push(
-    <div
-      className="indicator"
-      style={{
-      width: `${100/numberOfImages}%`,
-      backgroundColor: i === currentIndex ? '#ffffff' : '#dddddd',
-      }}
-    />
+    const { numberOfImages, currentIndex } = this.props;
+    let imageIndicator = [];
+    for (let i = 0; i < numberOfImages; i++) {
+      imageIndicator.push(
+        <div
+          className="indicator"
+          style={{
+          width: `${100/numberOfImages}%`,
+          backgroundColor: i === currentIndex ? '#ffffff' : '#dddddd',
+          }}
+        />
+      );
+    }
+    return (
+      <div className="image-indicator">
+        {imageIndicator}
+      </div>
     );
-  }
-  return (
-    <div className="image-indicator">
-    {imageIndicator}
-    </div>
-  );
   }
 }
 
