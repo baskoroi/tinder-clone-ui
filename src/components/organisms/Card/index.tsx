@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import styles from './style.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faChevronLeft, faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import ImageIndicator from '../../molecules/ImageIndicator';
@@ -38,41 +38,45 @@ class Card extends React.Component<CardProps, CardState> {
     const { currentImageIndex } = this.state;
     const numberOfImages = imageUrls.length;
     return (
-      <div className="container">
+      <div className={styles.container}>
         <ImageIndicator numberOfImages={numberOfImages} currentIndex={currentImageIndex} />
-        <img src={imageUrls[currentImageIndex]} className="image" alt="Your recommended pair" />
+        <img
+          src={imageUrls[currentImageIndex]}
+          className={styles.image}
+          alt="Your recommended user"
+        />
         {currentImageIndex !== 0
           ? (
-            <div className="prev-image-wrapper" onClick={this.openPreviousImage}>
+            <div className={styles['prev-image-wrapper']} onClick={this.openPreviousImage}>
               <FontAwesomeIcon
                 icon={faChevronLeft}
-                className="prev-image-button"
+                className={styles['prev-image-button']}
               />
             </div>
           )
           : undefined}
           {currentImageIndex !== numberOfImages - 1
             ? (
-              <div className="next-image-wrapper" onClick={this.openNextImage}>
+              <div className={styles['next-image-wrapper']} onClick={this.openNextImage}>
                 <FontAwesomeIcon
                   icon={faChevronRight}
-                  className="next-image-button"
+                  className={styles['next-image-button']}
                 />
               </div>
             )
             : undefined}
-        <div className="info">
-          <div className="identifier">
-            <div className="name-age">
-              <span className="name">Kezia</span>
-              <span className="age">23</span>
+        <div className={styles['info']}>
+          <div className={styles['identifier']}>
+            <div className={styles['name-age']}>
+              <span className={styles['name']}>Kezia</span>
+              <span className={styles['age']}>23</span>
             </div>
-            <button type="button" className="reveal-button">
+            <button type="button" className={styles['reveal-button']}>
               <FontAwesomeIcon icon={faArrowUp} />
             </button>
           </div>
-          <div className="location">
-            <FontAwesomeIcon icon={faLocationDot} className="location-icon" />
+          <div className={styles['location']}>
+            <FontAwesomeIcon icon={faLocationDot} className={styles['location-icon']} />
             <span>22 km away</span>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import './style.css';
+import styles from './style.module.scss';
 
 interface ImageIndicatorProps {
   numberOfImages: number;
@@ -13,7 +13,7 @@ class ImageIndicator extends React.Component<ImageIndicatorProps> {
     for (let i = 0; i < numberOfImages; i++) {
       imageIndicator.push(
         <div
-          className="indicator"
+          className={styles.indicator}
           style={{
             width: `${100/numberOfImages}%`,
             backgroundColor: i === currentIndex ? '#ffffff' : '#505965',
@@ -22,7 +22,7 @@ class ImageIndicator extends React.Component<ImageIndicatorProps> {
       );
     }
     return (
-      <div className="image-indicator">
+      <div className={styles.container}>
         {imageIndicator}
       </div>
     );
