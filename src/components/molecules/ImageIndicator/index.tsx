@@ -16,7 +16,7 @@ class ImageIndicator extends React.Component<ImageIndicatorProps> {
           className="indicator"
           style={{
             width: `${100/numberOfImages}%`,
-            backgroundColor: i === currentIndex ? '#ffffff' : '#dddddd',
+            backgroundColor: i === currentIndex ? '#ffffff' : '#505965',
           }}
         />
       );

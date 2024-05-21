@@ -11,6 +11,32 @@
   border-radius: 8px;
 }
 
+.prev-image-wrapper, .next-image-wrapper {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 36px;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.prev-image-wrapper {
+  left: 0;
+}
+
+.next-image-wrapper {
+  right: 0;
+}
+
+.prev-image-button, .next-image-button {
+  color: #ffffff;
+  font-size: 16pt;
+  margin: auto;
+}
+
 .info {
   position: absolute;
   bottom: 0px;
