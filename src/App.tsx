@@ -14,12 +14,12 @@ class App extends React.Component {
         <nav>
           <img src={logo} alt="logo" className="img-logo" />
           <div className="nav-buttons">
-          <a href="/">
-            <FontAwesomeIcon icon={faBell} size='2x' />
-          </a>
-          <a href="/">
-            <FontAwesomeIcon icon={faBars} size='2x' />
-          </a>
+            <a href="/">
+              <FontAwesomeIcon icon={faBell} size='2x' />
+            </a>
+            <a href="/">
+              <FontAwesomeIcon icon={faBars} size='2x' />
+            </a>
           </div>
         </nav>
         <Card imageUrls={[TEST_IMAGE_SRC, TEST_IMAGE_SRC]} />
