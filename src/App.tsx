@@ -9,22 +9,22 @@ const TEST_IMAGE_SRC: string = 'https://images-ssl.gotinder.com/u/fXC9j6Jy16wV99
 
 class App extends React.Component {
   render(): React.ReactNode {
-    return (
-      <div className="App">
-        <nav>
-          <img src={logo} alt="logo" className="img-logo" />
-          <div className="nav-buttons">
-            <a href="/">
-              <FontAwesomeIcon icon={faBell} size='2x' />
-            </a>
-            <a href="/">
-              <FontAwesomeIcon icon={faBars} size='2x' />
-            </a>
-          </div>
-        </nav> 
-        <Card imageUrl={TEST_IMAGE_SRC} numberOfImages={5} />
+  return (
+    <div className="App">
+    <nav>
+      <img src={logo} alt="logo" className="img-logo" />
+      <div className="nav-buttons">
+      <a href="/">
+        <FontAwesomeIcon icon={faBell} size='2x' />
+      </a>
+      <a href="/">
+        <FontAwesomeIcon icon={faBars} size='2x' />
+      </a>
       </div>
-    );
+    </nav> 
+    <Card imageUrl={TEST_IMAGE_SRC} numberOfImages={5} />
+    </div>
+  );
   }
 }
 
