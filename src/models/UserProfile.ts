@@ -77,9 +77,74 @@ export const mockUserProfiles: UserProfile[] = [
       "https://via.placeholder.com/480x600?text=Robert+Williams+3"
     ]
   },
-  // Female profiles
   {
     id: 6,
+    name: "William Jones",
+    gender: "male",
+    location: "San Francisco",
+    university: "Stanford",
+    interests: ["writing", "tech"],
+    imageUrls: [
+      "https://via.placeholder.com/480x600?text=William+Jones+1",
+      "https://via.placeholder.com/480x600?text=William+Jones+2",
+      "https://via.placeholder.com/480x600?text=William+Jones+3"
+    ]
+  },
+  {
+    id: 7,
+    name: "Charles Garcia",
+    gender: "male",
+    location: "Miami",
+    university: "University of Miami",
+    interests: ["fitness", "yoga"],
+    imageUrls: [
+      "https://via.placeholder.com/480x600?text=Charles+Garcia+1",
+      "https://via.placeholder.com/480x600?text=Charles+Garcia+2",
+      "https://via.placeholder.com/480x600?text=Charles+Garcia+3"
+    ]
+  },
+  {
+    id: 8,
+    name: "Joseph Martinez",
+    gender: "male",
+    location: "Dallas",
+    university: "SMU",
+    interests: ["fashion", "traveling"],
+    imageUrls: [
+      "https://via.placeholder.com/480x600?text=Joseph+Martinez+1",
+      "https://via.placeholder.com/480x600?text=Joseph+Martinez+2",
+      "https://via.placeholder.com/480x600?text=Joseph+Martinez+3"
+    ]
+  },
+  {
+    id: 9,
+    name: "Thomas Rodriguez",
+    gender: "male",
+    location: "Seattle",
+    university: "University of Washington",
+    interests: ["coding", "gaming"],
+    imageUrls: [
+      "https://via.placeholder.com/480x600?text=Thomas+Rodriguez+1",
+      "https://via.placeholder.com/480x600?text=Thomas+Rodriguez+2",
+      "https://via.placeholder.com/480x600?text=Thomas+Rodriguez+3"
+    ]
+  },
+  {
+    id: 10,
+    name: "Christopher Anderson",
+    gender: "male",
+    location: "Denver",
+    university: "CU Boulder",
+    interests: ["reading", "photography"],
+    imageUrls: [
+      "https://via.placeholder.com/480x600?text=Christopher+Anderson+1",
+      "https://via.placeholder.com/480x600?text=Christopher+Anderson+2",
+      "https://via.placeholder.com/480x600?text=Christopher+Anderson+3"
+    ]
+  },
+  // Female profiles
+  {
+    id: 11,
     name: "Jane Smith",
     gender: "female",
     location: "Boston",
@@ -92,7 +157,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 7,
+    id: 12,
     name: "Emily Johnson",
     gender: "female",
     location: "San Francisco",
@@ -105,7 +170,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 8,
+    id: 13,
     name: "Sarah Davis",
     gender: "female",
     location: "Miami",
@@ -118,7 +183,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 9,
+    id: 14,
     name: "Jessica Garcia",
     gender: "female",
     location: "Dallas",
@@ -131,7 +196,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 10,
+    id: 15,
     name: "Karen Martinez",
     gender: "female",
     location: "Seattle",
@@ -144,7 +209,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 11,
+    id: 16,
     name: "Nancy Anderson",
     gender: "female",
     location: "Denver",
@@ -157,7 +222,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 12,
+    id: 17,
     name: "Elizabeth Thomas",
     gender: "female",
     location: "San Diego",
@@ -170,7 +235,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 13,
+    id: 18,
     name: "Mary Jackson",
     gender: "female",
     location: "Las Vegas",
@@ -183,7 +248,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 14,
+    id: 19,
     name: "Jennifer White",
     gender: "female",
     location: "Portland",
@@ -196,7 +261,7 @@ export const mockUserProfiles: UserProfile[] = [
     ]
   },
   {
-    id: 15,
+    id: 20,
     name: "Patricia Harris",
     gender: "female",
     location: "Atlanta",
@@ -206,19 +271,6 @@ export const mockUserProfiles: UserProfile[] = [
       "https://via.placeholder.com/480x600?text=Patricia+Harris+1",
       "https://via.placeholder.com/480x600?text=Patricia+Harris+2",
       "https://via.placeholder.com/480x600?text=Patricia+Harris+3"
-    ]
-  },
-  {
-    id: 16,
-    name: "Linda Clark",
-    gender: "female",
-    location: "Philadelphia",
-    university: "UPenn",
-    interests: ["history", "museum"],
-    imageUrls: [
-      "https://via.placeholder.com/480x600?text=Linda+Clark+1",
-      "https://via.placeholder.com/480x600?text=Linda+Clark+2",
-      "https://via.placeholder.com/480x600?text=Linda+Clark+3"
     ]
   }
 ];
