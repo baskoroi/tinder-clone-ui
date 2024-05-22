@@ -1,0 +1,77 @@
+.container {
+  width: fit-content;
+  height: 600px;
+  position: absolute;
+}
+
+.image-indicator, .image, .info {
+  width: 100%;
+}
+
+.image, .info {
+  border-radius: 8px;
+}
+
+.prev-image-wrapper, .next-image-wrapper {
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 36px;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.prev-image-wrapper {
+  left: 0;
+}
+
+.next-image-wrapper {
+  right: 0;
+}
+
+.prev-image-button, .next-image-button {
+  color: #ffffff;
+  font-size: 16pt;
+  margin: auto;
+}
+
+.info {
+  position: absolute;
+  bottom: 0px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0), #000000);
+  color: #ffffff;
+  padding: 12px;
+}
+
+.identifier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name, .age {
+  font-size: 20pt;
+}
+
+.name {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.reveal-button {
+  background: none;
+  border: 1px solid #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.location-icon {
+  margin-right: 8px;
+}

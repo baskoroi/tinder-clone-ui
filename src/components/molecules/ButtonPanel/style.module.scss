@@ -1,0 +1,55 @@
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+@mixin button-base($theme: #000000) {
+	color: $theme;
+	border: 1px solid $theme;
+	padding: 4px;
+
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 20pt;	
+	cursor: pointer;
+}
+
+@mixin button-large() {
+	width: 72px;
+	height: 72px;
+	border-radius: 36px;
+	font-size: 30pt;
+}
+
+// TODO use gradients inside of solid colors below
+.button-refresh {
+	@include button-base($theme: #fdcd56);
+}
+.button-nope {
+	@include button-base($theme: #e82386);
+}
+.button-super-like {
+	@include button-base($theme: #45c2f9);
+}
+.button-like {
+	@include button-base($theme: #5af9cc);
+}
+.button-boost {
+	@include button-base($theme: #d212d3);
+}
+// END TODO
+
+.button-nope, .button-like {
+	@include button-large()
+}
