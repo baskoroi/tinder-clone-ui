@@ -2,7 +2,6 @@
 
 .App {
   width: 480px;
-  height: 100%;
 
   display: flex;
   margin: 0 auto;
@@ -32,4 +31,16 @@
 
 .img-logo {
   width: 144px;
+}
+
+.card-stack {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.message-after-swipe > div {
+  margin: auto;
+  text-align: center;
 }

@@ -1,6 +1,7 @@
 .container {
   width: fit-content;
-  position: relative;
+  height: 600px;
+  position: absolute;
 }
 
 .image-indicator, .image, .info {
@@ -13,7 +14,7 @@
 
 .prev-image-wrapper, .next-image-wrapper {
   position: absolute;
-  z-index: 3;
+  z-index: 99;
   height: 100%;
   width: 36px;
   top: 0;
