@@ -6,6 +6,7 @@ import ImageIndicator from '../../molecules/ImageIndicator';
 
 interface CardProps {
   imageUrls: string[];
+  zIndex: number;
 }
 
 interface CardState {
@@ -34,11 +35,11 @@ class Card extends React.Component<CardProps, CardState> {
   };
 
   render(): React.ReactNode {
-    const { imageUrls } = this.props;
+    const { imageUrls, zIndex } = this.props;
     const { currentImageIndex } = this.state;
     const numberOfImages = imageUrls.length;
     return (
-      <div className={styles.container}>
+      <div className={styles.container} style={{ zIndex }}>
         <ImageIndicator numberOfImages={numberOfImages} currentIndex={currentImageIndex} />
         <img
           src={imageUrls[currentImageIndex]}

@@ -24,7 +24,10 @@ class App extends React.Component {
             </a>
           </div>
         </nav>
-        <Card imageUrls={[TEST_IMAGE_1, TEST_IMAGE_2]} />
+        <div className={styles['card-stack']}>
+          <Card imageUrls={[TEST_IMAGE_1, TEST_IMAGE_2]} zIndex={2} />
+          <Card imageUrls={[TEST_IMAGE_1, TEST_IMAGE_2]} zIndex={1} />
+        </div>
         <ButtonPanel />
       </div>
     );
