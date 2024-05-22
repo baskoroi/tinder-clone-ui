@@ -18,11 +18,13 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
   const openPreviousImage = (): void => {
     if (currentImageIndex - 1 < 0) return;
     setCurrentImageIndex(currentImageIndex - 1);
+    setSpring({ scale: 1 }); // Reset scale when switching images
   };
 
   const openNextImage = (): void => {
     if (currentImageIndex + 1 === imageUrls.length) return;
     setCurrentImageIndex(currentImageIndex + 1);
+    setSpring({ scale: 1 }); // Reset scale when switching images
   };
 
   const numberOfImages = imageUrls.length;
@@ -77,18 +79,12 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
         onMouseDown={(e) => e.preventDefault()} // Prevent image drag
       />
       {currentImageIndex !== 0 && (
-        <div className={styles['prev-image-wrapper']} onClick={() => {
-          openPreviousImage();
-          setSpring({ scale: 1 }); // Reset scale when switching images
-        }}>
+        <div className={styles['prev-image-wrapper']} onClick={openPreviousImage}>
           <FontAwesomeIcon icon={faChevronLeft} className={styles['prev-image-button']} />
         </div>
       )}
       {currentImageIndex !== numberOfImages - 1 && (
-        <div className={styles['next-image-wrapper']} onClick={() => {
-          openNextImage();
-          setSpring({ scale: 1 }); // Reset scale when switching images
-        }}>
+        <div className={styles['next-image-wrapper']} onClick={openNextImage}>
           <FontAwesomeIcon icon={faChevronRight} className={styles['next-image-button']} />
         </div>
       )}
