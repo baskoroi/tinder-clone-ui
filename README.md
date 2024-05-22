@@ -18,7 +18,7 @@ The recommendation system prioritizes users based on their university and intere
 
 ## UML diagrams
 
-Since UserProfile is technically a TypeScript interface, we can let it be public.
+Since UserProfile is technically a TypeScript interface, we can let its attribute be public.
 
 ```
 +-----------------------+                      +-------------------------------------------------------------------------+
