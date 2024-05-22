@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import styles from './style.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp, faChevronLeft, faChevronRight, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faChevronLeft, faChevronRight, faLocationDot, faUniversity } from '@fortawesome/free-solid-svg-icons';
 import ImageIndicator from '../../molecules/ImageIndicator';
 import { animated, useSpring } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
@@ -97,6 +97,17 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
           <button type="button" className={styles['reveal-button']}>
             <FontAwesomeIcon icon={faArrowUp} />
           </button>
+        </div>
+        <div className={styles.university}>
+          <span>
+            <FontAwesomeIcon icon={faUniversity} />{' '}
+            BINUS University
+          </span>
+        </div>
+        <div className={styles['interest-list']}>
+          <div className={styles.interest}>Foodie</div>
+          <div className={styles.interest}>Shopping</div>
+          <div className={styles.interest}>Traveling</div>
         </div>
         <div className={styles.location}>
           <FontAwesomeIcon icon={faLocationDot} className={styles['location-icon']} />
