@@ -1,4 +1,3 @@
-// Recommendation.ts
 import { UserProfile } from '../models/UserProfile';
 
 export class Recommendation {
@@ -17,16 +16,16 @@ export class Recommendation {
   }
 
   public generateDailyRecommendations(currentUser: UserProfile): UserProfile[] {
-    const weightedUsers = this.users.map(user => ({
-      user,
-      score: this.getSimilarityScore(currentUser, user),
-    }));
+    const oppositeGender = currentUser.gender === 'male' ? 'female' : 'male';
     
-    weightedUsers.sort((a, b) => b.score - a.score);
+    const filteredUsers = this.users.filter(user => user.gender === oppositeGender && user.id !== currentUser.id);
 
-    const recommendations = weightedUsers.slice(0, 10).map(item => item.user);
-    
-    // Add some randomness
-    return recommendations.sort(() => 0.5 - Math.random()).slice(0, 10);
+    const weightedUsers = filteredUsers.map(user => ({
+      ...user,
+      weight: this.getSimilarityScore(currentUser, user),
+    })).sort((a, b) => b.weight - a.weight);
+
+    const shuffledUsers = weightedUsers.sort(() => 0.5 - Math.random());
+    return shuffledUsers.slice(0, 10);
   }
 }
