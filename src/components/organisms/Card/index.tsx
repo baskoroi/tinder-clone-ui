@@ -9,7 +9,7 @@ import { useDrag } from 'react-use-gesture';
 interface CardProps {
   imageUrls: string[];
   zIndex: number;
-  onSwipe: () => void; // Add onSwipe prop
+  onSwipe: () => void;
 }
 
 const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
@@ -32,7 +32,7 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
     y: 0,
     rot: 0,
     scale: 1,
-    config: { tension: 200, friction: 40 }, // Adjusted for slower animation
+    config: { tension: 200, friction: 40 },
   }));
 
   const bind = useDrag(({ down, movement: [mx, my], direction: [xDir], velocity }) => {
@@ -44,7 +44,7 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
         y: my,
         rot: mx / 100 + (dir * 10),
         scale: 1,
-        onRest: onSwipe, // Call onSwipe when animation finishes
+        onRest: onSwipe,
       });
     } else {
       setSpring({
@@ -70,19 +70,25 @@ const Card: FC<CardProps> = ({ zIndex, imageUrls, onSwipe }) => {
       onMouseDown={(e) => e.preventDefault()} // Prevent default behavior
     >
       <ImageIndicator numberOfImages={numberOfImages} currentIndex={currentImageIndex} />
-      <img
-        src={imageUrls[currentImageIndex]}
-        className={styles.image}
-        alt="Your recommended user"
+      <img 
+        src={imageUrls[currentImageIndex]} 
+        className={styles.image} 
+        alt="Your recommended user" 
         onMouseDown={(e) => e.preventDefault()} // Prevent image drag
       />
       {currentImageIndex !== 0 && (
-        <div className={styles['prev-image-wrapper']} onClick={openPreviousImage}>
+        <div className={styles['prev-image-wrapper']} onClick={() => {
+          openPreviousImage();
+          setSpring({ scale: 1 }); // Reset scale when switching images
+        }}>
           <FontAwesomeIcon icon={faChevronLeft} className={styles['prev-image-button']} />
         </div>
       )}
       {currentImageIndex !== numberOfImages - 1 && (
-        <div className={styles['next-image-wrapper']} onClick={openNextImage}>
+        <div className={styles['next-image-wrapper']} onClick={() => {
+          openNextImage();
+          setSpring({ scale: 1 }); // Reset scale when switching images
+        }}>
           <FontAwesomeIcon icon={faChevronRight} className={styles['next-image-button']} />
         </div>
       )}
